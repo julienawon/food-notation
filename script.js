@@ -52,24 +52,47 @@ document.getElementById("happycomment").addEventListener("submit", function(even
 const like = () => {
   if (document.getElementById("like").style.color == "red") {
     // remove color
-    document.getElementById("like").classList.remove("fa-shake");
-    document.getElementById("like").style.color = "black";
     setTimeout(() => {
-      document.getElementById("like").classList.add("fa-flip");
+      document.getElementById("like").classList.remove("fa-shake");
     }
-    , 500);
-    document.getElementById("like").classList.remove("fa-flip");
+    , 1000);
+    document.getElementById("like").style.color = "black";
   } else {
     document.getElementById("like").style.color = "red";
-    document.getElementById("like").classList.remove("fa-flip");
+    // add class fa-shake for 5 seconds
+    document.getElementById("like").classList.add("fa-shake");
     setTimeout(() => {
-      document.getElementById("like").classList.add("fa-shake");
+      document.getElementById("like").classList.remove("fa-shake");
     }
     , 1000);
   }
-  document.getElementById("like").classList.remove("fa-shake");
 }
 
 const displayCommentbox = () => { 
   document.querySelector(".feed + div").style.display = "block";
+ if (document.getElementById("cc").style.color == "green") {
+    // remove color
+    document.getElementById("cc").style.color = "black";
+  } else {
+    document.getElementById("cc").style.color = "green";
+  }
 }
+
+const addBookmark = () => { 
+  if (document.getElementById("bookmark").style.color == "red") {
+    // remove color
+    document.getElementById("bookmark").style.color = "black";
+  } else {
+    document.getElementById("bookmark").style.color = "blue";
+  }
+}
+
+const share = () => { 
+  if (document.getElementById("ss").style.color == "gold") {
+    // remove color
+    document.getElementById("ss").style.color = "black";
+  } else {
+    document.getElementById("ss").style.color = "gold";
+  }
+}
+

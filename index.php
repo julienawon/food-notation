@@ -24,9 +24,9 @@
                 <img src="couscous.jpg" alt="Image du couscous">
                 <div class="feed-action">
                     <a href="#" onclick="like()"><i class="fa-solid fa-heart" id="like"></i></a>
-                    <a href="#"><i onclick="displayCommentbox()" class="fa-regular fa-comment"></i></a>
-                    <a href="#"><i class="fa-regular fa-bookmark"></i></a>
-                    <a href="#"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
+                    <a href="#"><i onclick="displayCommentbox()" id="cc" class="fa-solid fa-comment"></i></a>
+                    <a href="#"><i id="bookmark" onclick="addBookmark()" class="fa-solid fa-bookmark"></i></a>
+                    <a href="#"><i onclick="share()" id="ss"  class="fa-solid fa-arrow-up-from-bracket"></i></a>
                 </div>
             </div>
             <div style="display: none">
