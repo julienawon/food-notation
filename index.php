@@ -20,12 +20,20 @@
     </header>
     <main>
         <section id="commentaire">
-            <img src="couscous.jpg" alt="Image du couscous">
-            <div>
+            <div class="feed">
+                <img src="couscous.jpg" alt="Image du couscous">
+                <div class="feed-action">
+                    <a href="#" onclick="like()"><i class="fa-solid fa-heart" id="like"></i></a>
+                    <a href="#"><i onclick="displayCommentbox()" class="fa-regular fa-comment"></i></a>
+                    <a href="#"><i class="fa-regular fa-bookmark"></i></a>
+                    <a href="#"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
+                </div>
+            </div>
+            <div style="display: none">
                  <h1>Commentaire</h1>
                 <form action="server.php" method="post" id="happycomment">
                     <textarea name="commentaire"  cols="50" rows="10"></textarea>
-                    <input type="submit" value="Envoyer">
+                    <input type="submit" value="Noter">
                 </form>
             </div>
         </section>

@@ -45,7 +45,7 @@ main{
     margin: 0 auto;
 }
 img{
-    width: 30%;
+    width: 40%;
     height: 50%;
     margin: 0 auto;
     display: block;
@@ -72,15 +72,19 @@ input[type="submit"]{
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    float: right;
+    display: inline-block;
+}
+input[type="submit"]:hover{
+    background: #6d6d6d;
 }
 textarea{
-    width: 100%;
-    height: 100px;
+    width: 50%;
+    height: 50px;
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
     font-size: 20px;
+    display: inline-block;
 }
 
 #resultats{
@@ -112,4 +116,44 @@ footer{
     position: relative;
     bottom: 0;
     left: 0;
+}
+
+.feed{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.feed-action{
+    width: 40%;
+    margin: 8px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px;
+}
+.feed-action > a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    display: inline-block;
+}
+.feed-action>a > i{
+    font-size: 30px;
+}
+
+.feed + div > form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.feed+div> h1 {
+    text-align: center;
 }

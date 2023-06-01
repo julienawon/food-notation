@@ -31,7 +31,7 @@ document.getElementById("happycomment").addEventListener("submit", function(even
         responseBox.setAttribute("id", "responseBox");
           
           if (r.pos > r.neg) {
-              iconup.style.color = "orange";
+              iconup.style.color = "red";
               responseBox.appendChild(iconup);
               responseBox.appendChild(myp);
               resultats.appendChild(responseBox);
@@ -48,3 +48,28 @@ document.getElementById("happycomment").addEventListener("submit", function(even
     console.log("Erreur : " + error);
   });
 });
+
+const like = () => {
+  if (document.getElementById("like").style.color == "red") {
+    // remove color
+    document.getElementById("like").classList.remove("fa-shake");
+    document.getElementById("like").style.color = "black";
+    setTimeout(() => {
+      document.getElementById("like").classList.add("fa-flip");
+    }
+    , 500);
+    document.getElementById("like").classList.remove("fa-flip");
+  } else {
+    document.getElementById("like").style.color = "red";
+    document.getElementById("like").classList.remove("fa-flip");
+    setTimeout(() => {
+      document.getElementById("like").classList.add("fa-shake");
+    }
+    , 1000);
+  }
+  document.getElementById("like").classList.remove("fa-shake");
+}
+
+const displayCommentbox = () => { 
+  document.querySelector(".feed + div").style.display = "block";
+}
