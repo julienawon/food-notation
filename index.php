@@ -27,6 +27,7 @@
                     <a href="#"><i onclick="displayCommentbox()" id="cc" class="fa-solid fa-comment"></i></a>
                     <a href="#"><i id="bookmark" onclick="addBookmark()" class="fa-solid fa-bookmark"></i></a>
                     <a href="#"><i onclick="share()" id="ss"  class="fa-solid fa-arrow-up-from-bracket"></i></a>
+                    <a href="#" ><p id="score"></p></a>
                 </div>
             </div>
             <div style="display: none">

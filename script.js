@@ -1,6 +1,6 @@
 const resultats = document.getElementById("resultats");
-
-
+const score = document.getElementById("score");
+const scores = 0;
 document.getElementById("happycomment").addEventListener("submit", function(event) {
   event.preventDefault();
 
@@ -20,8 +20,8 @@ document.getElementById("happycomment").addEventListener("submit", function(even
         const icondown = document.createElement("i");
         const starfilled = document.createElement("i");
         const starempty = document.createElement("i");
-        iconup.setAttribute("class", "fa-solid fa-face-smile");
-        icondown.setAttribute("class", "fa-sharp fa-solid fa-face-angry");
+        iconup.setAttribute("class", "fa-solid fa-thumbs-up");
+        icondown.setAttribute("class", "fa-solid fa-thumbs-down");
         starfilled.setAttribute("class", "fa-solid fa-face-smile-hearts");
         starempty.setAttribute("class", "fa-thin fa-star");
         myp.innerHTML = this.elements.commentaire.value;
@@ -31,18 +31,21 @@ document.getElementById("happycomment").addEventListener("submit", function(even
         responseBox.setAttribute("id", "responseBox");
           
           if (r.pos > r.neg) {
-              iconup.style.color = "red";
+              iconup.style.color = "green";
               responseBox.appendChild(iconup);
               responseBox.appendChild(myp);
-              resultats.appendChild(responseBox);
+            resultats.appendChild(responseBox);
+            scores++;
           } else if (r.pos < r.neg) {
                 icondown.style.color = "red";
                 responseBox.appendChild(icondown);
                 responseBox.appendChild(myp);
-                resultats.appendChild(responseBox);
+            resultats.appendChild(responseBox);
+            scores--;
           } else { 
                 
-          }
+        }
+        score.innerHTML = scores;
   })
   .catch((error) => {
     console.log("Erreur : " + error);

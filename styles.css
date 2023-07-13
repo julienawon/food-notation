@@ -89,22 +89,42 @@ textarea{
 
 #resultats{
     display: block;
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: scroll;
 }
 #responseBox{
-    width: 100%;
-    padding: 10px;
+    width: 50%;
+    height: auto;
+    margin: 10px auto;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f4f4f4;
+    box-shadow: 0 0 10px #e7e5e5;
+    position: relative;
+    overflow: hidden;
 }
 #responseBox p{
-    padding-left: 22px;
+    padding-left: 10px;
     display: inline-block;
+    text-transform: lowercase;
     font-size: 20px;
 }
+#responseBox p::first-letter{
+    text-transform: uppercase;
+}
+  
 i{
-    font-size: 36px;
+    font-size: 30px;
 }
 footer{
     width: 100%;
