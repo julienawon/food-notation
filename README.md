@@ -17,4 +17,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 [MIT](https://choosealicense.com/licenses/mit/)
 # Contact
 Julien Awonga - julienawon@gmail.com
-# Give a star if you like it
+# Give a star if you like it 🌠
